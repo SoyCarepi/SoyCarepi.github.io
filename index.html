@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SoyCarepi - Addons & Apps</title>
     <style>
-        /* Fondo oscuro azulado idéntico a tu imagen */
+        /* Fondo oscuro azulado gamer */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #060b16;
@@ -13,11 +13,11 @@
             margin: 0;
             padding: 0;
         }
-        /* Banner principal */
+        /* Banner principal conectado con tu banner.jpg */
         header {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(6,11,22,1)), url('https://picsum.photos') no-repeat center;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(6,11,22,1)), url('banner.jpg') no-repeat center;
             background-size: cover;
-            padding: 60px 20px;
+            padding: 70px 20px;
             text-align: center;
             border-bottom: 2px solid #00c3ff;
         }
@@ -27,14 +27,24 @@
             color: #00c3ff;
             text-shadow: 0 0 10px #00c3ff;
         }
-        /* Contenedor de cuadrícula (Grid) para los Addons */
+        header p {
+            font-size: 14px;
+            letter-spacing: 2px;
+            color: #a0aec0;
+            margin: 5px 0 0 0;
+        }
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+        /* CUADRÍCULA CORREGIDA: Ahora define un tamaño máximo fijo para que no se estiren */
         .grid-addons {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
+            justify-content: center;
             gap: 20px;
-            max-width: 1000px;
             margin: 40px auto;
-            padding: 0 20px;
         }
         /* Tarjeta de Addon con diseño gamer */
         .tarjeta-addon {
@@ -44,6 +54,9 @@
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0,0,0,0.5);
             transition: transform 0.3s, border-color 0.3s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
         .tarjeta-addon:hover {
             transform: translateY(-5px);
@@ -56,6 +69,9 @@
         }
         .addon-info {
             padding: 15px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
         }
         .addon-info h3 {
             margin: 0 0 10px 0;
@@ -65,12 +81,14 @@
             font-size: 14px;
             color: #a0aec0;
             line-height: 1.4;
+            margin-bottom: 15px;
+            flex-grow: 1;
         }
-        /* Botones dobles de descarga (MCPEDL y MediaFire) */
+        /* Botones dobles de descarga */
         .botones-descarga {
             display: flex;
             gap: 10px;
-            margin-top: 15px;
+            margin-top: auto;
         }
         .btn {
             flex: 1;
@@ -85,7 +103,7 @@
         }
         .btn:hover { opacity: 0.9; }
         .btn-mcpedl { background-color: #0066ff; }
-        .btn-mediafire { background-color: #00cc66; }
+        .btn-curseforge { background-color: #f16436; } /* Color oficial de CurseForge arreglado */
     </style>
 </head>
 <body>
@@ -95,60 +113,73 @@
         <p>ADDONS • APPS • MINECRAFT • CREACIONES</p>
     </header>
 
-    <div class="grid-addons">
-        <!-- TARJETA 1: INVINCIBLE PET -->
-        <div class="tarjeta-addon">
-            <img src="Mascotas-Invencibles.png" alt="Invincible Pet" class="addon-miniature">
-            <div class="addon-info">
-                <h3>Mascotas Inmortales</h3>
-                <p>Protege a tus mascotas de cualquier peligro en tus aventuras,también puedes quitar la domesticación cuando quieras.</p>
-                <div class="botones-descarga">
-                    <a href="https://mcpedl.com/invinciblepetsuntamer" class="btn btn-mcpedl">MCPEDL</a>
-                    <a href="https://www.curseforge.com/minecraft-bedrock/addons/invinciblepetsuntamer" class="btn btn-curseforge">CurseForge</a>
+    <main>
+        <div class="grid-addons">
+            
+            <!-- TARJETA 1: INVINCIBLE PET -->
+            <div class="tarjeta-addon">
+                <img src="Mascotas-Inmortales.png" alt="Invincible Pet" class="addon-miniature">
+                <div class="addon-info">
+                    <h3>Mascotas Inmortales</h3>
+                    <p>Protege a tus mascotas de cualquier peligro en tus aventuras, también puedes quitar la domesticación cuando quieras.</p>
+                    <div class="botones-descarga">
+                        <a href="https://mcpedl.com/invinciblepetsuntamer" target="_blank" class="btn btn-mcpedl">MCPEDL</a>
+                        <a href="https://www.curseforge.com/minecraft-bedrock/addons/invinciblepetsuntamer" target="_blank" class="btn btn-curseforge">CurseForge</a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- TARJETA 2: MiniMapTeleport -->
-        <div class="tarjeta-addon">
-            <img src="MiniMapTeleport.png" alt="Minimap Teleport" class="addon-miniature">
-            <div class="addon-info">
-                <h3>Minimap Teleport</h3>
-                <p>Guarda tus casas,minas o lugares importantes y Teletransportate a ellos ademas cuenta con Radar de mobs cercanos y vision nocturna todo en un solo addon y sin perder tus logros.</p>
-                <div class="botones-descarga">
-                    <a href="https://mcpedl.com/minimap-teleport" class="btn btn-mcpedl">MCPEDL</a>
-                    <a href="https://www.curseforge.com/minecraft-bedrock/addons/minimap-teleport" class="btn btn-curseforge">CurseForge</a>
+            <!-- TARJETA 2: MiniMapTeleport -->
+            <div class="tarjeta-addon">
+                <img src="MiniMapTeleport.png" alt="Minimap Teleport" class="addon-miniature">
+                <div class="addon-info">
+                    <h3>Minimap Teleport</h3>
+                    <p>Guarda tus casas, minas o lugares importantes y Teletransportate a ellos ademas cuenta con Radar de mobs cercanos y vision nocturna todo en un solo addon y sin perder tus logros.</p>
+                    <div class="botones-descarga">
+                        <a href="https://mcpedl.com/minimap-teleport" target="_blank" class="btn btn-mcpedl">MCPEDL</a>
+                        <a href="https://www.curseforge.com/minecraft-bedrock/addons/minimap-teleport" target="_blank" class="btn btn-curseforge">CurseForge</a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- TARJETA 3: TreeFall -->
-        <div class="tarjeta-addon">
-            <img src="TreeFall.png" alt="TreeFall" class="addon-miniature">
-            <div class="addon-info">
-                <h3>TreeFall</h3>
-                <p>TreeFall hace que talar árboles sea más rápido y fácil al estar agachado.</p>
-                <div class="botones-descarga">
-                    <a href="https://mcpedl.com/treefall" class="btn btn-mcpedl">MCPEDL</a>
-                    <a href="https://www.curseforge.com/minecraft-bedrock/addons/treefall" class="btn btn-curseforge">CurseForge</a>
+            <!-- TARJETA 3: TreeFall -->
+            <div class="tarjeta-addon">
+                <img src="TreeFall.png" alt="TreeFall" class="addon-miniature">
+                <div class="addon-info">
+                    <h3>TreeFall</h3>
+                    <p>TreeFall hace que talar árboles sea más rápido y fácil al estar agachado.</p>
+                    <div class="botones-descarga">
+                        <a href="https://mcpedl.com/treefall" target="_blank" class="btn btn-mcpedl">MCPEDL</a>
+                        <a href="https://www.curseforge.com/minecraft-bedrock/addons/treefall" target="_blank" class="btn btn-curseforge">CurseForge</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    
-<!-- TARJETA 4: Toolbelt -->
-        <div class="tarjeta-addon">
-            <img src="Toolbelt.png" alt="Toolbelt" class="addon-miniature">
-            <div class="addon-info">
-                <h3>Toolbelt</h3>
-                <p>Mantén tus herramientas organizadas y accesibles con un extenso inventario con apartados para herramientas e inventario simple y compacto.</p>
-                <div class="botones-descarga">
-                    <a href="https://mcpedl.com/toolbelt" class="btn btn-mcpedl">MCPEDL</a>
-                    <a href="https://www.curseforge.com/minecraft-bedrock/addons/toolbelt" class="btn btn-curseforge">CurseForge</a>
+            
+            <!-- TARJETA 4: Toolbelt (DENTRO DE LA CAPA GRID CORRECTAMENTE) -->
+            <div class="tarjeta-addon">
+                <img src="Toolbelt.png" alt="Toolbelt" class="addon-miniature">
+                <div class="addon-info">
+                    <h3>Toolbelt</h3>
+                    <p>Mantén tus herramientas organizadas y accesibles con un extenso inventario con apartados para herramientas e inventario simple y compacto.</p>
+                    <div class="botones-descarga">
+                        <a href="https://mcpedl.com/toolbelt" target="_blank" class="btn btn-mcpedl">MCPEDL</a>
+                        <a href="https://www.curseforge.com/minecraft-bedrock/addons/toolbelt" target="_blank" class="btn btn-curseforge">CurseForge</a>
+                    </div>
                 </div>
             </div>
+
+        </div> <!-- Cierre correcto del contenedor Grid -->
+
+        <!-- 🌐 SECCIÓN DE REDES SOCIALES INTEGRADA AL FINAL -->
+        <div style="max-width: 1000px; margin: 50px auto 20px auto; padding: 20px; text-align: center; border-top: 1px solid #1e2d4a;">
+            <h3 style="color: #00c3ff; text-shadow: 0 0 10px #00c3ff; margin-bottom: 20px; font-size: 18px;">📱 SÍGUEME EN MIS REDES</h3>
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <a href="TU_LINK_DE_YOUTUBE" target="_blank" class="btn" style="background-color: #ff0000; padding: 12px 25px; border-radius: 8px; max-width: 150px;">🔴 YouTube</a>
+                <a href="TU_LINK_DE_TIKTOK" target="_blank" class="btn" style="background-color: #010101; border: 1px solid #ee1d52; padding: 12px 25px; border-radius: 8px; max-width: 150px;">⚫ TikTok</a>
+                <a href="TU_LINK_DE_DISCORD" target="_blank" class="btn" style="background-color: #5865F2; padding: 12px 25px; border-radius: 8px; max-width: 150px;">🔵 Discord</a>
+            </div>
         </div>
-</div>
-    
+    </main>
+
 </body>
 </html>
