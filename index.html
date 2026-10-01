@@ -1,4 +1,9 @@
 <!doctype html>
+<!--
+  GUÍA: Los marcadores [EDITAR: ...] y [TARJETA: ...] son notas para ti.
+  Son comentarios HTML: no se muestran en la web y no cambian su diseño.
+  Las imágenes deben conservar sus nombres/rutas actuales.
+-->
 <html lang="es">
 <head>
   <meta charset="utf-8">
@@ -23,30 +28,45 @@
   </style>
 </head>
 <body>
+  <!-- [EDITAR: MENÚ SUPERIOR] Nombres y destinos de los enlaces de navegación. -->
   <nav class="nav" id="nav"><div class="nav-inner"><a class="brand" href="#inicio">Soy<span>Carepi</span></a><div class="navlinks"><a href="#creaciones">Creaciones</a><a href="#sobre">Sobre el proyecto</a><a href="#redes">Redes</a></div><a class="nav-cta" href="#creaciones">Explorar →</a></div></nav>
 
+  <!-- [EDITAR: PORTADA] Textos y botones. La imagen de fondo es banner.jpg. -->
   <header class="hero" id="inicio"><div class="hero-content"><div class="eyebrow"><i class="dot"></i> Creaciones digitales independientes</div><h1>Ideas que se convierten en <em>juego.</em></h1><p>Bienvenido al espacio de SoyCarepi: addons, herramientas y proyectos creados para llevar nuevas ideas a Minecraft Bedrock y más allá.</p><div class="hero-actions"><a class="primary" href="#creaciones">Ver creaciones ↓</a><a class="secondary" href="#redes">Mis redes</a></div></div></header>
 
   <main>
+    <!-- [EDITAR: CATÁLOGO] Para añadir una creación, duplica una tarjeta <article class="card"> completa. -->
     <section class="section" id="creaciones">
       <div class="section-head"><div><div class="kicker">Catálogo</div><h2>Creaciones recientes</h2></div><p>Proyectos hechos para mejorar, simplificar o añadir nuevas posibilidades a tus mundos.</p></div>
       <div class="filters"><button class="filter active" data-filter="all">Todos</button><button class="filter" data-filter="teleport">Teletransporte</button><button class="filter" data-filter="survival">Supervivencia</button><button class="filter" data-filter="tools">Herramientas</button><button class="filter" data-filter="pets">Mascotas</button></div>
       <div class="grid" id="grid">
+        <!-- [TARJETA: TPA Teleport] Imagen, nombre, descripción, etiquetas y enlaces. -->
         <article class="card" data-cat="teleport"><div class="thumb"><img src="TPA-Teleport.png" alt="TPA Teleport"><span class="badge">Teleport</span></div><div class="card-body"><h3 class="card-title">TPA Teleport</h3><p>Solicita teletransportes a tus amigos y guarda lugares favoritos con marcadores.</p><div class="meta"><span class="tag">🏆 Logros</span><span class="tag">Multijugador</span></div><div class="links"><a class="link mc" href="https://mcpedl.com/tpa-teleport" target="_blank" rel="noopener">MCPEDL ↗</a><a class="link cf" href="https://www.curseforge.com/minecraft-bedrock/addons/tpa-teleport" target="_blank" rel="noopener">CurseForge ↗</a></div></div></article>
+        <!-- [TARJETA: Survival Teleport] -->
         <article class="card" data-cat="survival"><div class="thumb"><img src="Survival-Teleport.png" alt="Survival Teleport"><span class="badge">Survival</span></div><div class="card-body"><h3 class="card-title">Survival Teleport</h3><p>Coloca tu punto, guarda ubicaciones y viaja sin convertir tu mundo en un menú de comandos.</p><div class="meta"><span class="tag">🏆 Logros</span><span class="tag">Supervivencia</span></div><div class="links"><a class="link mc" href="https://mcpedl.com/survival-teleport" target="_blank" rel="noopener">MCPEDL ↗</a><a class="link cf" href="https://www.curseforge.com/minecraft-bedrock/addons/survival-teleport" target="_blank" rel="noopener">CurseForge ↗</a></div></div></article>
+        <!-- [TARJETA: Compass Teleport] -->
         <article class="card" data-cat="teleport"><div class="thumb"><img src="Compass-teleport.png" alt="Compass Teleport"><span class="badge">Teleport</span></div><div class="card-body"><h3 class="card-title">Compass Teleport</h3><p>Usa una brújula para guardar y visitar tus casas, minas y lugares importantes.</p><div class="meta"><span class="tag">🏆 Logros</span><span class="tag">Brújula</span></div><div class="links"><a class="link mc" href="https://mcpedl.com/compass-teleport" target="_blank" rel="noopener">MCPEDL ↗</a><a class="link cf" href="https://www.curseforge.com/minecraft-bedrock/addons/compass-teleport" target="_blank" rel="noopener">CurseForge ↗</a></div></div></article>
+        <!-- [TARJETA: Mascotas Inmortales] -->
         <article class="card" data-cat="pets"><div class="thumb"><img src="Mascotas-Inmortales.png" alt="Mascotas Inmortales"><span class="badge">Pets</span></div><div class="card-body"><h3 class="card-title">Mascotas Inmortales</h3><p>Protege a tus mascotas domesticadas y recupera la normalidad cuando quieras.</p><div class="meta"><span class="tag">🏆 Logros</span><span class="tag">Mascotas</span></div><div class="links"><a class="link mc" href="https://mcpedl.com/invinciblepetsuntamer" target="_blank" rel="noopener">MCPEDL ↗</a><a class="link cf" href="https://www.curseforge.com/minecraft-bedrock/addons/invinciblepetsuntamer" target="_blank" rel="noopener">CurseForge ↗</a></div></div></article>
+        <!-- [TARJETA: TreeFall] -->
         <article class="card" data-cat="survival"><div class="thumb"><img src="TreeFall.png" alt="TreeFall"><span class="badge">Survival</span></div><div class="card-body"><h3 class="card-title">TreeFall</h3><p>Tala árboles completos al agacharte y cortar, haciendo la recolección mucho más rápida.</p><div class="meta"><span class="tag">🏆 Logros</span><span class="tag">Chop</span></div><div class="links"><a class="link mc" href="https://mcpedl.com/treefall" target="_blank" rel="noopener">MCPEDL ↗</a><a class="link cf" href="https://www.curseforge.com/minecraft-bedrock/addons/treefall" target="_blank" rel="noopener">CurseForge ↗</a></div></div></article>
+        <!-- [TARJETA: Toolbelt] -->
         <article class="card" data-cat="tools"><div class="thumb"><img src="Toolbelt.png" alt="Toolbelt"><span class="badge">Tools</span></div><div class="card-body"><h3 class="card-title">Toolbelt</h3><p>Organiza herramientas e inventario en un espacio compacto y rápido de usar.</p><div class="meta"><span class="tag">🏆 Logros</span><span class="tag">Utilidad</span></div><div class="links"><a class="link mc" href="https://mcpedl.com/toolbelt" target="_blank" rel="noopener">MCPEDL ↗</a><a class="link cf" href="https://www.curseforge.com/minecraft-bedrock/addons/toolbelt" target="_blank" rel="noopener">CurseForge ↗</a></div></div></article>
+        <!-- [TARJETA: MiniMap Teleport] Sustituye los enlaces provisionales cuando tengas los definitivos. -->
         <article class="card" data-cat="teleport"><div class="thumb"><img src="MiniMapTeleport.png" alt="MiniMap Teleport"><span class="badge">Nuevo</span></div><div class="card-body"><h3 class="card-title">MiniMap Teleport</h3><p>Encuentra y guarda ubicaciones con una experiencia de teletransporte inspirada en mapas.</p><div class="meta"><span class="tag">Exploración</span><span class="tag">Teleport</span></div><div class="links"><a class="link mc" href="https://mcpedl.com/" target="_blank" rel="noopener">MCPEDL ↗</a><a class="link cf" href="https://www.curseforge.com/minecraft-bedrock/addons" target="_blank" rel="noopener">CurseForge ↗</a></div></div></article>
       </div>
+      <!-- [EDITAR: PUBLICIDAD] Espacio reservado para anuncios; puedes eliminar este bloque si no lo usarás. -->
       <div class="ad-slot" aria-label="Espacio publicitario">Espacio publicitario</div>
+      <!-- [EDITAR: SOBRE EL PROYECTO] Texto y cifras de estadísticas. -->
       <div class="feature" id="sobre"><div><div class="kicker">SoyCarepi</div><h3>Más que addons.</h3><p>Un pequeño laboratorio creativo para experimentar con ideas, herramientas, diseños y contenido para gamers.</p></div><div class="stats"><div class="stat"><strong>7+</strong><span>proyectos</span></div><div class="stat"><strong>2</strong><span>plataformas</span></div></div></div>
     </section>
 
+    <!-- [EDITAR: REDES SOCIALES] Cambia los enlaces de tus perfiles aquí. -->
     <section class="social" id="redes"><div><h2>Conecta con SoyCarepi</h2><p>Novedades, pruebas, videos y nuevos proyectos.</p></div><div class="social-links"><a class="social-link" href="https://youtube.com/@soycarepi" target="_blank" rel="noopener">YouTube ↗</a><a class="social-link" href="https://www.tiktok.com/@soycarepi" target="_blank" rel="noopener">TikTok ↗</a><a class="social-link" href="https://discord.com/users/1007777177841963079" target="_blank" rel="noopener">Discord ↗</a></div></section>
   </main>
+  <!-- [EDITAR: PIE DE PÁGINA] Año, nombre y aviso de marca. -->
   <footer><span>© 2026 <b>SoyCarepi</b>. Todos los proyectos y diseños propios.</span><span>Minecraft es una marca de Mojang Studios.</span></footer>
+  <!-- [EDITAR: FUNCIONES] El código siguiente controla la barra superior y los filtros. -->
   <script>
     const nav=document.getElementById('nav');
     addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>30),{passive:true});
